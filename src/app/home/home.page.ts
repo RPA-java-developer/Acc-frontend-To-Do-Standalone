@@ -8,7 +8,7 @@ import { DatePipe, NgForOf } from '@angular/common';
 
 
 import { IonIcon } from '@ionic/angular/standalone'; // 1. Importa el componente
-import { add, ellipse, heart, trashOutline, shareOutline, checkmarkOutline } from 'ionicons/icons'; // 3. Impo
+import { add, ellipse, heart, trashOutline, shareOutline, checkmarkOutline, createOutline } from 'ionicons/icons'; // 3. Impo
 import { AddNewTaskPage } from '../add-new-task/add-new-task.page';
 import { UpdateTaskPagePage } from '../update-task-page/update-task-page.page';
 import { TodoService } from '../todo-service';
@@ -28,25 +28,25 @@ export class HomePage {
 
   todoList = [
     {
-      itemName : 'Coding',
+      itemName : 'Informe',
       itemDueDate : '12-13-21',
       itemPriority : 'high',
-      itemCategory : 'Work'
+      itemCategory : 'Trabajo'
     },
     {
-      itemName : 'Design',
+      itemName : 'Prueba Accenture',
       itemDueDate : '10-28-21',
       itemPriority : 'low',
-      itemCategory : 'Work'
+      itemCategory : 'Trabajo'
     },
     {
-      itemName : 'Shopping',
+      itemName : 'Salir de fiesta',
       itemDueDate : '10-30-21',
       itemPriority : 'middle',
       itemCategory : 'Personal'
     },
     {
-      itemName : 'Workout',
+      itemName : 'Ir Gym',
       itemDueDate : '10-25-21',
       itemPriority : 'high',
       itemCategory : 'Personal'
@@ -61,7 +61,7 @@ export class HomePage {
 
   constructor(public modalCtlr: ModalController, public todoService:TodoService) {
 
-    addIcons({ add, ellipse,logoIonic,  heart, trashOutline, shareOutline, checkmarkOutline });
+    addIcons({ add, ellipse,logoIonic,  heart, trashOutline, shareOutline, checkmarkOutline, createOutline });
      //this.getAllTask()
   }
 
@@ -100,7 +100,7 @@ export class HomePage {
     })
 
     modal.onDidDismiss().then(()=>{
-      this.getAllTask()
+      //this.getAllTask()
     })
 
     return await modal.present()

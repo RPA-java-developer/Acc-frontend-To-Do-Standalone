@@ -24,7 +24,7 @@ import { TodoService } from '../todo-service';
 export class AddNewTaskPage implements OnInit {
 
 
-  categories =['work','personal','home']
+  categories =['Trabajo','Personal','Casa','Amigos','Deporte']
   selectedCategory: any
 
 

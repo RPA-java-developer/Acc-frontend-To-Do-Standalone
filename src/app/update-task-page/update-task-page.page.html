@@ -1,13 +1,100 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>UpdateTaskPage</ion-title>
+    <ion-title>Nueva Tarea</ion-title>
+    <ion-icon name="close"  slot="end" size="larger" class="ion-padding" (click)="dismisActualizar()"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">UpdateTaskPage</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+
+  <ion-card class="ion-align-self-center" >
+    <ion-item>
+          <ion-textarea  placeholder="Write task here"></ion-textarea>
+    </ion-item>
+
+
+
+   <ion-item>
+     <ion-label >Priority</ion-label>
+     <ion-select  placeholder="Choose one">
+       <ion-select-option value="low">Low</ion-select-option>
+       <ion-select-option value="middle">Middle</ion-select-option>
+       <ion-select-option value="high" selected>High</ion-select-option>
+      </ion-select>
+   </ion-item>
+
+
+<!-- Botón propio que abre el modal -->
+<ion-button id="open-modal-btn">Seleccionar Fecha</ion-button>
+
+<ion-modal trigger="open-modal-btn">
+  <ng-template>
+    <ion-content>
+      <!-- Agregamos los botones de Confirmar/Cancelar nativos -->
+      <ion-datetime
+        #miDatetime
+        showDefaultButtons="true"
+        doneText="Confirmar"
+        cancelText="Cancelar"
+        id="dueDate" >
+       >
+      </ion-datetime>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+<!-- Displaying the selected value instantly -->
+<p>You selected: </p>
+
+<!--
+<ion-item>
+  <ion-icon name="calendar-outline" slot="start"></ion-icon>
+  <ion-label>Due Date</ion-label>
+  <ion-datetime-button datetime="dueDate"></ion-datetime-button>
+</ion-item>
+
+<ion-modal keepContentsMounted="true">
+  <ng-template>
+    <ion-datetime
+      id="dueDate"
+      [(ngModel)]="taskDueDate">
+    </ion-datetime>
+  </ng-template>
+</ion-modal>
+-->
+
+
+
+
+   <ion-item>
+     <ion-icon name="pricetag-outline" slot="start"></ion-icon>
+     <ion-label>Category</ion-label>
+     <span></span>
+   </ion-item>
+
+   <ion-item>
+
+     <ion-chip>
+       <ion-label color="secondary"></ion-label>
+     </ion-chip>
+
+     <ion-chip color="primary" outline="true">
+       <ion-label color="secondary">new</ion-label>
+       <ion-button fill="clear">
+         <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+       </ion-button>
+     </ion-chip>
+
+   </ion-item>
+
+
+
+     <ion-button class="ion-margin" expand="block"  >Add Task</ion-button>
+
+
+
+  </ion-card>
+
+
+
+
 </ion-content>

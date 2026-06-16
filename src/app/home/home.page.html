@@ -2,8 +2,8 @@
   <ion-toolbar>
 
     <ion-item lines="none">
-      <ion-label style="font-weight: 800;font-size: 3em;;">
-        Today
+      <ion-label style="font-weight: 600;font-size: 2em;;">
+        Hoy
         <p style="font-weight: 400; color: #433465;">{{today | date:'fullDate'}}</p>
       </ion-label>
     </ion-item>
@@ -40,25 +40,21 @@
 
     <ion-row>
 
-      <ion-item>
-        <ion-icon name="share-outline"></ion-icon>
-        <p>Share</p>
-      </ion-item>
 
       <ion-item button (click)="update(item)">
         <ion-icon name="create-outline"></ion-icon>
-        <p>Update</p>
+        <p>Actualizar</p>
       </ion-item>
 
 
       <ion-item>
         <ion-icon name="checkmark-outline"></ion-icon>
-        <p>Complete</p>
+        <p>Completar</p>
       </ion-item>
 
       <ion-item button (click)="delete(i)">
         <ion-icon name="trash-outline"></ion-icon>
-        <p>Cancel</p>
+        <p>Cancelar</p>
       </ion-item>
 
     </ion-row>

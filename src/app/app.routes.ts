@@ -10,5 +10,13 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  {
+    path: 'add-new-task',
+    loadComponent: () => import('./add-new-task/add-new-task.page').then( m => m.AddNewTaskPage)
+  },
+  {
+    path: 'update-task-page',
+    loadComponent: () => import('./update-task-page/update-task-page.page').then( m => m.UpdateTaskPagePage)
+  },
 
 ];

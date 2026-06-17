@@ -35,7 +35,6 @@ export class UpdateTaskPagePage implements OnInit {
       itemPriority: 'high',
       itemCategory: 'Work'
     }*/
-    )
-
+    )};
 
 }

@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Nueva Tarea</ion-title>
+    <ion-title>Actualizar actividad</ion-title>
     <ion-icon name="close"  slot="end" size="larger" class="ion-padding" (click)="dismisActualizar()"></ion-icon>
   </ion-toolbar>
 </ion-header>
@@ -9,7 +9,7 @@
 
   <ion-card class="ion-align-self-center" >
     <ion-item>
-          <ion-textarea  placeholder="Write task here"></ion-textarea>
+          <ion-textarea  placeholder="Escriba la actividad aquí"></ion-textarea>
     </ion-item>
 
 
@@ -17,9 +17,9 @@
    <ion-item>
      <ion-label >Priority</ion-label>
      <ion-select  placeholder="Choose one">
-       <ion-select-option value="low">Low</ion-select-option>
-       <ion-select-option value="middle">Middle</ion-select-option>
-       <ion-select-option value="high" selected>High</ion-select-option>
+       <ion-select-option value="low">Baja</ion-select-option>
+       <ion-select-option value="middle">Media</ion-select-option>
+       <ion-select-option value="high" selected>Alta</ion-select-option>
       </ion-select>
    </ion-item>
 
@@ -43,7 +43,7 @@
   </ng-template>
 </ion-modal>
 <!-- Displaying the selected value instantly -->
-<p>You selected: </p>
+<p>Seleccion: </p>
 
 <!--
 <ion-item>
@@ -67,7 +67,7 @@
 
    <ion-item>
      <ion-icon name="pricetag-outline" slot="start"></ion-icon>
-     <ion-label>Category</ion-label>
+     <ion-label>Categoria</ion-label>
      <span></span>
    </ion-item>
 
@@ -88,7 +88,7 @@
 
 
 
-     <ion-button class="ion-margin" expand="block"  >Add Task</ion-button>
+     <ion-button class="ion-margin" expand="block"  >Actualizar actividad</ion-button>
 
 
 

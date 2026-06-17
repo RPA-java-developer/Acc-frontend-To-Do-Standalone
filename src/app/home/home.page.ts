@@ -59,7 +59,7 @@ export class HomePage {
 
 
 
-  constructor(public modalCtlr: ModalController, public todoService:TodoService) {
+  constructor(public modalCtlr: ModalController) {
 
     addIcons({ add, ellipse,logoIonic,  heart, trashOutline, shareOutline, checkmarkOutline, createOutline });
      //this.getAllTask()
@@ -81,8 +81,8 @@ export class HomePage {
 
 
   getAllTask(){
-    this.todoList = this.todoService.getAllTasks()
-    console.log(this.todoService.getAllTasks());
+    //this.todoList = this.todoService.getAllTasks()
+    //console.log(this.todoService.getAllTasks());
   }
 
 
